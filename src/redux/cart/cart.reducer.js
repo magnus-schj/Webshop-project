@@ -12,9 +12,10 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                 hidden: !state.hidden
             }
         default: 
-        console.log("CartActionTypes.TOGGLE_CART_HIDDEN er ")
-        console.log(CartActionTypes.TOGGLE_CART_HIDDEN)
-        console.log(action.type)
+        // ** DEBUGGING:
+        // console.log("CartActionTypes.TOGGLE_CART_HIDDEN er ")
+        // console.log(CartActionTypes.TOGGLE_CART_HIDDEN)
+        // console.log(action.type)
         return state;
     }
 }
