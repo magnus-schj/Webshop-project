@@ -1,29 +1,30 @@
-import CartActionTypes from './cart.types'
+import CartActionTypes from "./cart.types";
+import { addItemToCart } from "./cart.utils";
 
 const INITIAL_STATE = {
-    hidden: true,
-    cartItems: []
-}
+  hidden: true,
+  cartItems: [],
+};
 
 const cartReducer = (state = INITIAL_STATE, action) => {
-    switch(action.type) {
-        case CartActionTypes.TOGGLE_CART_HIDDEN: 
-            return {
-                ...state,
-                hidden: !state.hidden
-            }
-        case CartActionTypes.ADD_ITEM:
-            return {
-                ...state, 
-                cartItems: [...state.cartItems, action.payload]
-            }
-        default: 
-        // ** DEBUGGING:
-        console.log("CartActionTypes.TOGGLE_CART_HIDDEN:")
-        console.log(CartActionTypes.TOGGLE_CART_HIDDEN)
-        console.log(action.type)
-        return state;
-    }
-}
+  switch (action.type) {
+    case CartActionTypes.TOGGLE_CART_HIDDEN:
+      return {
+        ...state,
+        hidden: !state.hidden,
+      };
+    case CartActionTypes.ADD_ITEM:
+      return {
+        ...state,
+        cartItems: addItemToCart(state.cartItems, action.payload),
+      };
+    default:
+      // ** DEBUGGING:
+      console.log("CartActionTypes.TOGGLE_CART_HIDDEN:");
+      console.log(CartActionTypes.TOGGLE_CART_HIDDEN);
+      console.log(action.type);
+      return state;
+  }
+};
 
 export default cartReducer;
