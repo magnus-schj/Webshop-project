@@ -1,5 +1,6 @@
 # CRWN clothing
-A project for learning react
+A project for learning react <br>
+Link: https://magnus-webshop-project.herokuapp.com/
 
 
 
