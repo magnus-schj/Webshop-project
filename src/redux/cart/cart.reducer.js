@@ -32,9 +32,9 @@ const cartReducer = (state = INITIAL_STATE, action) => {
       };
     default:
       // ** DEBUGGING:
-      console.log("CartActionTypes.TOGGLE_CART_HIDDEN:");
-      console.log(CartActionTypes.TOGGLE_CART_HIDDEN);
-      console.log(action.type);
+      // console.log("CartActionTypes.TOGGLE_CART_HIDDEN:");
+      // console.log(CartActionTypes.TOGGLE_CART_HIDDEN);
+      // console.log(action.type);
       return state;
   }
 };
